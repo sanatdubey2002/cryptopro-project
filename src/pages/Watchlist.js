@@ -3,7 +3,7 @@ import Button from "../components/Common/Button";
 import Header from "../components/Common/Header";
 import TabsComponent from "../components/Dashboard/Tabs";
 import { get100Coins } from "../functions/get100Coins";
-
+import { Link } from "react-router-dom";
 function Watchlist() {
   const watchlist = JSON.parse(localStorage.getItem("watchlist"));
   const [coins, setCoins] = useState([]);
@@ -38,9 +38,9 @@ function Watchlist() {
               margin: "2rem",
             }}
           >
-            <a href="/dashboard">
+            <Link to="/dashboard">
               <Button text="Dashboard" />
-            </a>
+            </Link>
           </div>
         </div>
       )}
