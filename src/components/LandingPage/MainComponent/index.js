@@ -6,7 +6,7 @@ import iphone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
-
+import { Link } from "react-router-dom";
 function MainComponent() {
   return (
     <div className="main-flex">
@@ -42,9 +42,9 @@ function MainComponent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.25, duration: 0.75 }}
         >
-          <a href="/dashboard">
+          <Link to="/dashboard">
             <Button text={"Dashboard"} />
-          </a>
+          </Link>
           <RWebShare
             data={{
               text: "Try this CryptoDashboard made by Sanat Dubey using React JS.",
